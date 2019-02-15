@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>ParapenteApp</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6></ion-col>
+      <ion-col col-1>
+        <ion-icon class="icon" name="arrow-dropup-circle" (click)="send('on_g')"></ion-icon>
+      </ion-col>
+      <ion-col col-5></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-5></ion-col>
+      <ion-col col-1>
+        <ion-icon class="icon" name="arrow-dropleft-circle" (click)="send('left')"></ion-icon>
+      </ion-col>
+      <ion-col col-1></ion-col>
+      <ion-col col-1>
+        <ion-icon class="icon" name="arrow-dropright-circle" (click)="send('right')"></ion-icon>
+      </ion-col>
+      <ion-col col-5></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6></ion-col>
+      <ion-col col-1>
+        <ion-icon class="icon" name="arrow-dropdown-circle" (click)="send('off_g')"></ion-icon>
+      </ion-col>
+      <ion-col col-5></ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>
+
+<ion-footer>
+  <ion-item>
+    <ion-input type="text" [(ngModel)]="chat_input" placeholder="Enter message"></ion-input>
+    <ion-icon name="md-send" (click)="send(chat_input)" item-right></ion-icon>
+  </ion-item>
+</ion-footer>
